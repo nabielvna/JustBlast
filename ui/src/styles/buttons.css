@@ -1,0 +1,135 @@
+:root {
+  --action-radius: 8px;
+  --action-border-width: 1px;
+  --action-duration: 120ms;
+}
+:root button:not(:is(.board-cell, .manual-piece-cell, .plan-row-select, .candidate-row, .piece-tile, .shape-library-choice, .slot-choice, .slot-crop-origin)) {
+  appearance: none;
+  border-radius: var(--action-radius) !important;
+  border-width: var(--action-border-width) !important;
+  border-style: solid !important;
+  border-color: var(--action-stroke, var(--rule)) !important;
+  background-color: var(--action-fill, var(--surface)) !important;
+  background-clip: padding-box;
+  color: var(--action-ink, var(--ink)) !important;
+  opacity: 1 !important;
+  transform: none !important;
+  translate: none !important;
+  scale: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  transition: background-color var(--action-duration) ease-out, color var(--action-duration) ease-out, border-color var(--action-duration) ease-out !important;
+}
+:root button:not(:is(.board-cell, .manual-piece-cell, .plan-row-select, .candidate-row, .piece-tile, .shape-library-choice, .slot-choice, .slot-crop-origin)):not(:disabled):not([aria-disabled='true']):hover {
+  background-color: color-mix(in srgb, var(--action-fill, var(--surface)) 93%, var(--ink) 7%) !important;
+}
+:root button:not(:is(.board-cell, .manual-piece-cell, .plan-row-select, .candidate-row, .piece-tile, .shape-library-choice, .slot-choice, .slot-crop-origin)):not(:disabled):not([aria-disabled='true']):active {
+  background-color: color-mix(in srgb, var(--action-fill, var(--surface)) 86%, var(--ink) 14%) !important;
+}
+:root button:not(:is(.board-cell, .manual-piece-cell, .plan-row-select, .candidate-row, .piece-tile, .shape-library-choice, .slot-choice, .slot-crop-origin)):not(:disabled):not([aria-disabled='true']):focus-visible {
+  border-color: var(--accent) !important;
+}
+.button-primary, .plan-row-action {
+  --action-fill: var(--solid);
+  --action-stroke: var(--solid);
+  --action-ink: var(--on-solid);
+}
+.plan-replace-button {
+  --action-fill: var(--solid);
+  --action-stroke: var(--solid);
+  --action-ink: var(--on-solid);
+}
+.plan-explore-button {
+  --action-fill: var(--ghost);
+  --action-stroke: var(--ghost);
+  --action-ink: var(--accent);
+}
+button:is([aria-pressed='true'], [aria-selected='true'], [aria-expanded='true'], .is-reset, .is-previewing) {
+  --action-fill: var(--ghost);
+  --action-stroke: var(--tile);
+  --action-ink: var(--accent);
+}
+:root button:not(:is(.board-cell, .manual-piece-cell, .plan-row-select, .candidate-row, .piece-tile, .shape-library-choice, .slot-choice, .slot-crop-origin)):is(:disabled, [aria-disabled='true']) {
+  --action-fill: var(--action-disabled-fill, var(--soft));
+  --action-stroke: var(--action-disabled-stroke, var(--rule));
+  --action-ink: var(--action-disabled-ink, var(--muted));
+  cursor: default;
+}
+button.is-danger, .device-force-stop, .settings-force-stop {
+  --action-fill: var(--danger-soft);
+  --action-stroke: var(--danger);
+  --action-ink: var(--danger);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root button:not(:is(.board-cell, .manual-piece-cell, .plan-row-select, .candidate-row, .piece-tile, .shape-library-choice, .slot-choice, .slot-crop-origin)) { transition: none !important; }
+}
+.settings-method { gap: 6px; padding-bottom: 8px; }
+.settings-method button { margin-bottom: 0; }
+
+:root button:is(.plan-row-select, .candidate-row, .piece-tile, .shape-library-choice, .slot-choice, .slot-crop-origin) {
+  transform: none !important;
+  translate: none !important;
+  scale: none !important;
+  transition: background-color var(--action-duration) ease-out, color var(--action-duration) ease-out, border-color var(--action-duration) ease-out !important;
+}
+
+.plan-inspector .plan-explore-button,
+.plan-inspector .plan-row-action,
+.plan-inspector .plan-row-action.is-reset {
+  --action-fill: transparent;
+  --action-stroke: transparent;
+  --action-ink: var(--accent);
+  --action-disabled-fill: transparent;
+  --action-disabled-stroke: transparent;
+  --action-disabled-ink: var(--muted);
+}
+
+.moves-explorer .explorer-back,
+.moves-explorer .order-clear,
+.moves-explorer .order-change,
+.moves-explorer .candidate-pagination .button,
+.position-menu .position-option {
+  --action-fill: transparent;
+  --action-stroke: transparent;
+  --action-ink: var(--accent);
+  --action-disabled-fill: transparent;
+  --action-disabled-stroke: transparent;
+  --action-disabled-ink: var(--muted);
+}
+.moves-explorer .position-trigger {
+  --action-fill: var(--page);
+  --action-stroke: var(--rule);
+  --action-ink: var(--ink);
+}
+.position-menu .position-option.is-highlighted,
+.position-menu .position-option[aria-selected='true'] {
+  --action-fill: var(--soft);
+  --action-ink: var(--accent);
+}
+
+.console-panel .icon-control:not(.button-primary):not(.is-danger),
+.console-panel .move-device-shortcut {
+  --action-fill: transparent;
+  --action-stroke: var(--rule);
+  --action-ink: var(--ink);
+}
+
+.settings-dialog .settings-tab,
+.settings-dialog .settings-method button,
+.piece-editor .piece-editor-transforms .button,
+.piece-editor .shape-library-tabs .button,
+.piece-editor .control-settings,
+.settings-dialog .control-settings,
+.legend-popover .legend-close-button {
+  --action-fill: transparent;
+  --action-stroke: transparent;
+  --action-ink: var(--muted);
+}
+.settings-dialog .settings-tab[aria-selected='true'],
+.settings-dialog .settings-method button[aria-pressed='true'],
+.piece-editor .shape-library-tabs .button[aria-pressed='true'] {
+  --action-fill: var(--soft);
+  --action-stroke: transparent;
+  --action-ink: var(--accent);
+}

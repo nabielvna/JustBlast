@@ -1,0 +1,139 @@
+[
+  {
+    "name": "demo",
+    "board": [
+      "...##...",
+      "....#...",
+      "##......",
+      ".##.....",
+      "...#....",
+      "##......",
+      "###.....",
+      "..##...."
+    ],
+    "pieces": [
+      {
+        "slot": 0,
+        "id": 5
+      },
+      {
+        "slot": 1,
+        "id": 9
+      },
+      {
+        "slot": 2,
+        "id": 27
+      }
+    ],
+    "states": [
+      {
+        "count": 0,
+        "misses": 0,
+        "producer_remaining": 0,
+        "saved_count": 0,
+        "checking": false,
+        "waiting": 0,
+        "recovered": false
+      },
+      {
+        "count": 0,
+        "misses": 0,
+        "producer_remaining": 0,
+        "saved_count": 0,
+        "checking": false,
+        "waiting": 0,
+        "recovered": false
+      },
+      {
+        "count": 0,
+        "misses": 0,
+        "producer_remaining": 0,
+        "saved_count": 0,
+        "checking": false,
+        "waiting": 0,
+        "recovered": false
+      }
+    ]
+  },
+  {
+    "name": "cycle-001",
+    "board": [
+      "########",
+      "#..####.",
+      ".#.#...#",
+      "###..###",
+      "######.#",
+      "#..#.###",
+      "..##..##",
+      "####.###"
+    ],
+    "pieces": [
+      {
+        "slot": 0,
+        "id": 14
+      },
+      {
+        "slot": 1,
+        "id": 14
+      },
+      {
+        "slot": 2,
+        "id": 20
+      }
+    ]
+  },
+  {
+    "name": "sparse-mixed",
+    "board": [
+      "...##...",
+      "....#...",
+      "##......",
+      ".##.....",
+      "...#....",
+      "##......",
+      "###.....",
+      "..##...."
+    ],
+    "pieces": [
+      {
+        "slot": 0,
+        "id": 5
+      },
+      {
+        "slot": 1,
+        "id": 9
+      },
+      {
+        "slot": 2,
+        "id": 6
+      }
+    ]
+  },
+  {
+    "name": "empty-three-singles",
+    "board": [
+      "........",
+      "........",
+      "........",
+      "........",
+      "........",
+      "........",
+      "........",
+      "........"
+    ],
+    "pieces": [
+      {
+        "slot": 0,
+        "id": 1
+      },
+      {
+        "slot": 1,
+        "id": 1
+      },
+      {
+        "slot": 2,
+        "id": 1
+      }
+    ]
+  }
+]

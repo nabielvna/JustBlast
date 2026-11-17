@@ -1,0 +1,13 @@
+node_modules/
+dist/
+target/
+.tools/
+ui/.svelte-check/
+bun.lock
+Cargo.lock
+src-tauri/gen/
+ui/src/generated/
+ui/src/styles/
+ui/public/
+test-results/
+playwright-report/

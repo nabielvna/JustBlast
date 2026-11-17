@@ -1,0 +1,190 @@
+[
+  {
+    "name": "demo",
+    "steps": [
+      {
+        "slot": 0,
+        "row": 6,
+        "column": 3
+      },
+      {
+        "slot": 1,
+        "row": 6,
+        "column": 6
+      },
+      {
+        "slot": 2,
+        "row": 3,
+        "column": 0
+      }
+    ],
+    "finalBoard": [
+      "...##...",
+      "....#...",
+      "##......",
+      "###.....",
+      "##.#....",
+      "##......",
+      "........",
+      "..##..##"
+    ],
+    "metrics": {
+      "value": 95.0,
+      "potential_points": 1.0,
+      "combo_alive": 1,
+      "flexibility": 1.0,
+      "fragmentation": 0.0,
+      "shape_coverage": 41,
+      "normalized_by_scenario": {
+        "basic": 1.0,
+        "continuation": 1.0,
+        "multi_line": 1.0
+      }
+    },
+    "maxima": [20, 20, 20],
+    "gains": [20, 20, 20],
+    "visited": 29088,
+    "complete": true
+  },
+  {
+    "name": "cycle-001",
+    "steps": [
+      {
+        "slot": 0,
+        "row": 5,
+        "column": 0
+      },
+      {
+        "slot": 1,
+        "row": 2,
+        "column": 3
+      },
+      {
+        "slot": 2,
+        "row": 5,
+        "column": 4
+      }
+    ],
+    "finalBoard": [
+      "........",
+      "#..####.",
+      ".#.###.#",
+      "........",
+      "######.#",
+      "........",
+      "........",
+      "........"
+    ],
+    "metrics": {
+      "value": 94.90853658536585,
+      "potential_points": 1.0,
+      "combo_alive": 1,
+      "flexibility": 0.9963414634146341,
+      "fragmentation": 0.0,
+      "shape_coverage": 41,
+      "normalized_by_scenario": {
+        "basic": 1.0,
+        "continuation": 1.0,
+        "multi_line": 1.0
+      }
+    },
+    "maxima": [222, 222, 342],
+    "gains": [222, 222, 342],
+    "visited": 109,
+    "complete": true
+  },
+  {
+    "name": "sparse-mixed",
+    "steps": [
+      {
+        "slot": 0,
+        "row": 6,
+        "column": 3
+      },
+      {
+        "slot": 2,
+        "row": 6,
+        "column": 6
+      },
+      {
+        "slot": 1,
+        "row": 6,
+        "column": 0
+      }
+    ],
+    "finalBoard": [
+      "...##...",
+      "....#...",
+      "##......",
+      ".##.....",
+      "...#....",
+      "##......",
+      "##......",
+      "####..#."
+    ],
+    "metrics": {
+      "value": 95.0,
+      "potential_points": 1.0,
+      "combo_alive": 1,
+      "flexibility": 1.0,
+      "fragmentation": 0.0,
+      "shape_coverage": 41,
+      "normalized_by_scenario": {
+        "basic": 1.0,
+        "continuation": 1.0,
+        "multi_line": 1.0
+      }
+    },
+    "maxima": [20, 20, 20],
+    "gains": [20, 20, 20],
+    "visited": 24375,
+    "complete": true
+  },
+  {
+    "name": "empty-three-singles",
+    "steps": [
+      {
+        "slot": 0,
+        "row": 0,
+        "column": 0
+      },
+      {
+        "slot": 1,
+        "row": 0,
+        "column": 7
+      },
+      {
+        "slot": 2,
+        "row": 7,
+        "column": 0
+      }
+    ],
+    "finalBoard": [
+      "#......#",
+      "........",
+      "........",
+      "........",
+      "........",
+      "........",
+      "........",
+      "#......."
+    ],
+    "metrics": {
+      "value": 70.0,
+      "potential_points": 1.0,
+      "combo_alive": 0,
+      "flexibility": 1.0,
+      "fragmentation": 0.0,
+      "shape_coverage": 41,
+      "normalized_by_scenario": {
+        "basic": 1.0,
+        "continuation": 1.0,
+        "multi_line": 1.0
+      }
+    },
+    "maxima": [3, 3, 3],
+    "gains": [3, 3, 3],
+    "visited": 129089,
+    "complete": true
+  }
+]

@@ -1,0 +1,22 @@
+[screen]
+width = 1080
+height = 2400
+board = [63, 582, 954, 954]
+slots = [[30, 1650, 335, 370], [370, 1650, 340, 370], [715, 1650, 335, 370]]
+preview_pitch = 54.0
+cell_majority = 0.90
+
+[touch]
+gain = 1.4
+lift = 269.0
+hold = 0.08
+drop = 0.08
+gap = 0.08
+risk_max = 0.08
+
+[runtime]
+tray_wait = 0.50
+retry_wait = 0.10
+tray_attempts = 3
+command_timeout = 10.0
+

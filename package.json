@@ -1,0 +1,63 @@
+{
+  "name": "justblast",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.4",
+  "engines": {
+    "node": ">=26.13.1 <27",
+    "bun": "1.4.4"
+  },
+  "scripts": {
+    "dev": "bun scripts/run.mjs dev",
+    "dev:ui": "bun scripts/run.mjs ui",
+    "build": "bun scripts/run.mjs build",
+    "build:ui": "bun scripts/run.mjs build-ui",
+    "typecheck": "bun scripts/run.mjs typecheck",
+    "lint": "bun scripts/run.mjs lint",
+    "format": "bun scripts/run.mjs format",
+    "format:check": "bun scripts/run.mjs format-check",
+    "test": "bun scripts/run.mjs test",
+    "test:e2e": "bun scripts/run.mjs e2e",
+    "test:desktop": "bun scripts/run.mjs desktop-test",
+    "contracts:generate": "bun scripts/run.mjs contracts",
+    "contracts:check": "bun scripts/run.mjs contracts-check",
+    "check": "bun scripts/run.mjs check",
+    "tauri": "tauri",
+    "benchmark": "bun scripts/run.mjs benchmark"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "2.12.4",
+    "svelte": "5.57.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "@tauri-apps/cli": "2.12.4",
+    "@types/node": "26.6.6",
+    "oxc-parser": "0.158.0",
+    "oxlint": "1.93.0",
+    "prettier": "3.10.1",
+    "prettier-plugin-svelte": "4.1.1",
+    "svelte-check-native": "1.12.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.8"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "plugins": [
+      "prettier-plugin-svelte"
+    ],
+    "overrides": [
+      {
+        "files": "*.svelte",
+        "options": {
+          "parser": "svelte"
+        }
+      }
+    ]
+  }
+}

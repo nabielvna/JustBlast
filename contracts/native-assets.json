@@ -1,0 +1,14 @@
+{
+  "resources/native/crop.c": {
+    "sha256": "30df2c47db9550c0b952cb70e13f55d4afc2c2a2be38ef36fb3e211a9fa4a7e8"
+  },
+  "resources/native/bb-crop-android": {
+    "sha256": "5ae2387320f3db784eeb18bbb713d0b9bf2df6c243dc8c0f32d6158f96d4330b"
+  },
+  "resources/shapes-v1.json": {
+    "sha256": "37a20e91557bd38498781c2b8faf7967684a43397986477f4af298c78234c417"
+  },
+  "resources/default-profile.toml": {
+    "sha256": "64dfa8bfdb46b96e27f45faa90a4c4a1a8017cc344aa0ee4ef22d00f9eee0d2c"
+  }
+}

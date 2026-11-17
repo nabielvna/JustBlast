@@ -1,0 +1,52 @@
+[package]
+name = "justblast-desktop"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+default-run = "justblast"
+
+[lib]
+name = "justblast_desktop"
+crate-type = ["rlib"]
+
+[[bin]]
+name = "justblast"
+path = "src/main.rs"
+required-features = ["desktop"]
+
+[[bin]]
+name = "export-contracts"
+path = "src/bin/export-contracts.rs"
+required-features = ["export-contracts"]
+
+[[bin]]
+name = "ipc-test-host"
+path = "src/bin/ipc-test-host.rs"
+required-features = ["test-host"]
+
+[features]
+default = ["desktop"]
+desktop = ["dep:tauri", "dep:tauri-build"]
+export-contracts = ["dep:ts-rs"]
+test-host = []
+
+[dependencies]
+justblast-core = { path = "../crates/justblast-core" }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
+flate2 = "=1.1.11"
+regex = "=1.13.1"
+toml = "=1.2.1"
+png = "=0.18.1"
+tauri = { version = "=2.12.5", optional = true, default-features = false, features = ["wry", "compression", "x11", "common-controls-v6", "dynamic-acl"] }
+ts-rs = { version = "=12.0.1", optional = true }
+
+[build-dependencies]
+tauri-build = { version = "=2.7.4", optional = true, features = [] }
+
+[dev-dependencies]
+serde_json = "=1.0.154"
+
+[lints]
+workspace = true

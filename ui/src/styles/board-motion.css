@@ -1,0 +1,41 @@
+.board-cell,
+.board-cell::before,
+.break-background,
+.piece-tile .piece-shape {
+  transition: none;
+}
+.board-cell.is-landing,
+.board-cell.is-breaking {
+  z-index: 2;
+}
+.board-cell.is-landing::before {
+  animation: quiet-land var(--board-motion-duration) ease-out;
+}
+.board-cell.is-landing::after {
+  content: none;
+}
+.board-cell.is-breaking::before {
+  background: var(--break);
+  animation: quiet-clear var(--board-motion-duration) ease-out;
+}
+.board-cell.is-breaking .board-cell-label {
+  color: var(--on-tile);
+}
+.board-section[data-motion-phase='placing'] .break-background,
+.board-section[data-motion-phase='breaking'] .break-background {
+  opacity: 0.2;
+}
+@keyframes quiet-land {
+  from { transform: translateY(1px); }
+  to { transform: translateY(0); }
+}
+@keyframes quiet-clear {
+  from { transform: scale(1); }
+  to { transform: scale(0.99); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .board-cell.is-landing::before,
+  .board-cell.is-breaking::before {
+    animation: none;
+  }
+}

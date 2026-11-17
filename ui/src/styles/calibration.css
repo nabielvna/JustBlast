@@ -1,0 +1,62 @@
+.calibration-image.calibration-board-zoom { width: min(100%, 480px); overflow: hidden; border: 1px solid var(--rule); border-radius: 8px; }
+.calibration-overlay:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.calibration-board i.unclear { background: var(--warning); border-color: var(--warning); }
+
+.settings-dialog .settings-footer[hidden] { display: none; }
+.calibration-wizard { display: flex; flex-direction: column; min-height: min(550px, calc(100dvh - 180px)); }
+.calibration-wizard .calibration-steps { display: flex; flex-wrap: nowrap; gap: 0; margin: 0 0 28px; padding: 0; }
+.calibration-wizard .calibration-steps li { flex: 1; min-width: 0; }
+.calibration-wizard .calibration-steps button { --action-fill: transparent; --action-stroke: transparent; --action-ink: var(--muted); --action-disabled-fill: transparent; --action-disabled-stroke: transparent; display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 4px 0; font-size: 11px; }
+.calibration-wizard .calibration-steps button span { display: grid; place-items: center; width: 20px; height: 20px; border: 1px solid var(--rule); border-radius: 50%; font-size: 10px; }
+.calibration-wizard .calibration-steps button[aria-current='step'] { --action-fill: transparent; --action-stroke: transparent; --action-ink: var(--ink); }
+.calibration-wizard .calibration-steps button[aria-current='step'] span { background: var(--accent); color: var(--on-solid); border-color: var(--accent); }
+.calibration-heading { margin-bottom: 20px; }
+.calibration-heading h3 { margin: 0 0 7px; font-size: 21px; font-weight: 500; letter-spacing: -0.5px; }
+.calibration-heading > p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.calibration-step-content { flex: 1; min-width: 0; }
+.calibration-wizard .calibration-image.calibration-board-zoom { width: min(100%, 340px); margin: 0 auto 10px; }
+.calibration-wizard .tray-grid-canvas { margin: 8px 0 12px; }
+.calibration-gesture { margin: 0 0 18px; color: var(--muted); text-align: center; font-size: 11px; }
+.calibration-options { margin-top: 12px; border-top: 1px solid var(--rule); padding-top: 12px; }
+.calibration-options > summary { cursor: pointer; color: var(--muted); font-size: 11px; padding: 4px 0; }
+.calibration-options[open] > summary { color: var(--ink); margin-bottom: 14px; }
+.calibration-options .settings-field, .calibration-options .calibration-actions { margin-top: 12px; }
+.calibration-working { display: flex; align-items: center; gap: 10px; padding: 12px 0; color: var(--muted); font-size: 12px; }
+.calibration-working > span:nth-child(2) { flex: 1; }
+.calibration-spinner { width: 14px; height: 14px; flex: 0 0 14px; border: 2px solid var(--rule); border-top-color: var(--accent); border-radius: 50%; animation: calibration-spin 1s linear infinite; }
+@keyframes calibration-spin { to { rotate: 360deg; } }
+.calibration-wizard .calibration-link { --action-fill: transparent; --action-stroke: transparent; --action-ink: var(--muted); --action-disabled-fill: transparent; --action-disabled-stroke: transparent; padding: 7px 3px; min-height: 32px; font-size: 11px; }
+.calibration-preparation { display: flex; align-items: center; justify-content: center; gap: 20px; min-height: 150px; margin-bottom: 16px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.calibration-phone-icon { font-size: 78px; font-weight: 300; line-height: 1; color: var(--accent); }
+.calibration-phone-status { display: flex; align-items: center; gap: 9px; padding: 14px 0; font-size: 12px; }
+.calibration-phone-status strong { font-weight: 500; }
+.calibration-status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--success); }
+.calibration-test-state, .calibration-complete { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 215px; gap: 12px; text-align: center; }
+.calibration-test-state > span, .calibration-complete > span { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; border: 1px solid var(--rule); color: var(--accent); font-size: 28px; }
+.calibration-test-state strong, .calibration-complete strong { font-size: 16px; font-weight: 500; }
+.calibration-test-state p, .calibration-complete p { margin: 0; color: var(--muted); font-size: 12px; }
+.calibration-inline-status { margin: 12px 0; padding: 10px 0; color: var(--warning); font-size: 12px; }
+.calibration-save-summary { display: flex; align-items: center; gap: 12px; margin: 20px 0 28px; font-size: 12px; }
+.calibration-save-summary > span { color: var(--success); font-size: 22px; }
+.calibration-save-summary p { margin: 0; }
+.calibration-wizard-footer { position: sticky; bottom: -26px; z-index: 2; display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: 24px -28px -26px; padding: 16px 28px; border-top: 1px solid var(--rule); background: var(--surface); }
+.calibration-footer-actions { display: flex; align-items: center; gap: 18px; margin-left: auto; }
+.calibration-wizard-footer > .button-primary { margin-left: auto; }
+.calibration-wizard-footer .button-primary { min-width: 135px; }
+@media (max-width: 600px) {
+  .calibration-wizard { min-height: min(540px, calc(100dvh - 240px)); }
+  .calibration-wizard .calibration-steps { margin-bottom: 22px; }
+  .calibration-wizard .calibration-steps button { flex-direction: column; gap: 5px; font-size: 9px; }
+  .calibration-heading h3 { font-size: 19px; }
+  .calibration-wizard-footer { bottom: -20px; margin: 20px -20px -20px; padding: 14px 20px; gap: 10px; }
+  .calibration-footer-actions { gap: 10px; }
+  .calibration-wizard-footer .button-primary { min-width: 0; }
+  .calibration-preparation { justify-content: flex-start; gap: 16px; min-height: 130px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .calibration-spinner { animation: none; } }
+.calibration-preparation .calibration-phone-icon { width: 40px; height: 64px; flex: 0 0 40px; }
+@media (max-width: 600px) {
+  .settings-dialog:has(.settings-tab[aria-selected='true'][id$='-calibration']) .settings-tabs { display: flex; flex-direction: row; flex-wrap: nowrap; overflow-x: auto; gap: 4px; padding: 8px 12px; white-space: nowrap; scrollbar-width: thin; }
+  .settings-dialog:has(.settings-tab[aria-selected='true'][id$='-calibration']) .settings-tab { flex: 0 0 auto; width: auto; padding: 8px 10px; font-size: 11px !important; }
+}

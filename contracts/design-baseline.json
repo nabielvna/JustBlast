@@ -1,0 +1,20 @@
+{
+  "ui/src/styles/device-controls.css": {
+    "sha256": "7d288f5ed1270514b1ee143710584bf5ea1457ea88f97fdcd8827f4c05c332c4"
+  },
+  "ui/src/styles/dashboard.css": {
+    "sha256": "940b83a743b8df623bba9744de62820fee0602980f418c2d3f7ba0141a0327f5"
+  },
+  "ui/src/styles/settings.css": {
+    "sha256": "54d1ac1d913e63b9533c13afaaa912fabe3564eee3a5b96754c6b98f21a81b50"
+  },
+  "ui/src/styles/board-motion.css": {
+    "sha256": "c64039dcce72bd597cd896230c04defa6c0601d89b0769d48b60090a24a05320"
+  },
+  "ui/src/styles/workspace.css": {
+    "sha256": "9557cdd7a3cd7514f91357c1fe9760a8a27da33c975d99cd74f83b75a7416abd"
+  },
+  "ui/src/styles/buttons.css": {
+    "sha256": "9a5e73842f28f06461aa9497467674872abc96faa0684cc90e7072bd8637d3f9"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "oxc"],
+  "categories": { "correctness": "error" },
+  "env": { "browser": true, "node": true },
+  "globals": {
+    "$state": "readonly",
+    "$derived": "readonly",
+    "$effect": "readonly",
+    "$props": "readonly"
+  },
+  "rules": {
+    "typescript/no-explicit-any": "error",
+    "no-unused-vars": ["error", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }]
+  },
+  "ignorePatterns": [
+    "node_modules/**",
+    ".tools/**",
+    "target/**",
+    "dist/**",
+    "src-tauri/gen/**",
+    "ui/src/generated/**",
+    "ui/.svelte-check/**",
+    "test-results/**",
+    "playwright-report/**"
+  ]
+}
